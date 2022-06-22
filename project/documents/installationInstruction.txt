@@ -1,0 +1,12 @@
+NEEDED :
+Intellij Ultimate
+  >gson-2.8.0.jar
+  >mysql-connector-java-8.9.25.jar
+  >> Must also be included at the xml/project structure to work
+Xampp 
+  >Apache
+  >MySql
+Tomcat 9.0.39
+
+WILL HELP:
+browser with cors disabled
