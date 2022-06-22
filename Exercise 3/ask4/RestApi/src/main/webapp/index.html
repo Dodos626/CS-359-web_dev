@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<head>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="buttons.js"></script>
+        
+    
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Form" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+<div id="whole">
+    <div class="flexboxrow">
+        <div class="flexboxcolumn">
+            <header>
+                <h1>Welcome to our website</h1>
+            </header>
+            <div id="sub-header">thanks for visiting :)</div>
+        </div>
+    </div>
+    <!--the under title grey line-->
+    <div class="flexboxrow">
+        <div id="undertitle">
+        </div>
+    </div>
+    <div class="flexboxrow">
+
+        <!--the we have a column to enter each type of form-->
+        <!-- Basic Login information-->
+        <div class="flexboxcolumn">
+
+            <!--inside the column we have a flex-item to store the things-->
+                <div class="flex-item">
+
+                    <div class="flex-item-inside">
+                        <table id="first_table">
+                            <tr>
+                                <th>
+                                    <!--empty on purpose-->
+                                </th>
+                                <th>
+                                    <div class="flex-item-title">Select an option from below</div>
+                                </th>
+                                <th>
+                                    <!--empty on purpose-->
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>amka:</th>
+                                <th><input id="amka_kataxwrisi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>test of the date:</th>
+                                <th><input id="test_date_kataxwrisi"></input>
+                                </th>
+                                <th>in the form of yyyy-MM-dd</th>
+                            </tr>
+                            <tr>
+                                <th>medical center:</th>
+                                <th><input id="medical_center_kataxwrisi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>blood_sugar:</th>
+                                <th><input id="blood_sugar_kataxwrisi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>vitamin_b12:</th>
+                                <th><input id="vitamin_b12_kataxwrisi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>cholesterol:</th>
+                                <th><input id="cholesterol_kataxwrisi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>vitamin_d3:</th>
+                                <th><input id="vitamin_d3_kataxwrisi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>iron:</th>
+                                <th><input id="iron_kataxwrisi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>Prostheste tis eksetaseis:</th>
+                                <th><button class="button" onclick="kataxwrisi()">Kataxwrisi</button>
+                                </th>
+                                <th></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="flex-item-inside">
+                        <table id="second_table">
+                            <tr>
+                                <th>amka:</th>
+                                <th><input id="amka_anaktisi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>fromDate:</th>
+                                <th><input id="fromDate_anaktisi"></input>
+                                </th>
+                                <th>yyyy-MM-dd</th>
+                            </tr>
+                            <tr>
+                                <th>toDate:</th>
+                                <th><input id="toDate_anaktisi"></input>
+                                </th>
+                                <th>yyyy-MM-dd</th>
+                            </tr>
+                            <tr>
+                                <th>Anaktisi eksetasewn:</th>
+                                <th><button class="button" onclick="anaktisi()">Anaktisi</button>
+                                </th>
+                                <th></th>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="flex-item-inside">
+                        <table id="third_table">
+                            <tr>
+                                <th>amka:</th>
+                                <th><input id="amka_search"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>type of measurement:</th>
+                                <th><input id="measure_search"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>Advanced search:</th>
+                                <th><button class="button" onclick="search()">Advanced search</button>
+                                </th>
+                                <th></th>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="flex-item-inside">
+                        <table id="fourth_table">
+                            <tr>
+                                <th>blood test id:</th>
+                                <th><input id="bloodTestID_ananewsi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>type of measurement:</th>
+                                <th><input id="measure_ananewsi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>value of measurement:</th>
+                                <th><input id="value_ananewsi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>Ananewsi eksetasewn:</th>
+                                <th><button class="button" onclick="ananewsi()">Ananewsi</button>
+                                </th>
+                                <th></th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="flex-item-inside">
+                        <table id="fifth_table">
+                            <tr>
+                                <th>blood test id:</th>
+                                <th><input id="bloodTestID_diagrafi"></input>
+                                </th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>Diagrafi eksetasewn:</th>
+                                <th><button class="button" onclick="diagrafi()">Diagrafi</button>
+                                </th>
+                                <th></th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+    </div>
+
+
+</div>
+</body>
+
+</html>

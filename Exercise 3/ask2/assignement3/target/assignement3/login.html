@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Form" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A useless one</title>
+</head>
+
+<body>
+
+<!--The header of the site -->
+<div class="flexboxrow">
+    <div class="flexboxcolumn">
+        <header>
+            <h1>Login</h1>
+        </header>
+        <div id="sub-header">to our database</div>
+    </div>
+</div>
+
+<!--the under title grey line-->
+<div class="flexboxrow">
+    <div id="undertitle">
+    </div>
+</div>
+
+<!--the main body-->
+<!--everything goes into a row-->
+<form method="post" id="login_form">
+
+    <div class="flexboxrow">
+
+        <!--the we have a column to enter each type of form-->
+        <!-- Basic Login information-->
+        <div class="flexboxcolumn">
+
+            <!--inside the column we have a flex-item to store the things-->
+            <div class="flex-item">
+                <div class="flex-item-inside">
+
+                    <!--and because we need left the title and right the input we need again a row-->
+
+
+
+                    <table id="first_table" >
+                        <tr>
+                            <th>
+                                <!--empty on purpose-->
+                            </th>
+                            <th>
+                                <div class="flex-item-title">Basic Login Information</div>
+                            </th>
+                            <th>
+                                <!--empty on purpose-->
+                            </th>
+                        </tr>
+                        <!--For the username-->
+                        <tr>
+                            <th style="text-align: right;"><label for="username"><b>Username:</b></label></th>
+                            <th>
+
+                                <input type="text"  id="username" name="username" required>
+
+                            </th>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                    
+                        <!--For the password-->
+                        <tr>
+                            <th style="text-align: right;"><label for="pwd"><b>Password:</b></label></th>
+                            <th>
+
+                                <input type="password" id="pwd" name="pwd" style="margin: 0%;" required>
+                                
+                            </th>
+                            <td>
+                                
+                            </td>
+                        </tr>
+
+                        
+                       
+                        
+                        <tr>
+                            <th>
+                                <!--left blank on purpose to maintain the button in the middle-->
+                            </th>
+                            <th>
+                                <button id="button_bottom" type="submit" class="fill" >Login</button>
+                            </th>
+                            <th>
+                                <!--empty on purpose-->
+                            </th>
+                        </tr>
+                        <tr id="for_errors"><th></th><th></th><th></th></tr>
+                    </table>
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+</div>
+<footer>The next facebook is coming</footer>
+</div>
+</form>
+</div>
+<script src="login.js"></script>
+</body>
+
+</html>

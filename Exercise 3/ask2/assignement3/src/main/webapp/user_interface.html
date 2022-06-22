@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="el">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="user_interface.js"></script>
+    <script src="change_info.js"></script>
+    <script>function logout() {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          console.log(xhr.responseText)
+
+          window.location.href = xhr.responseText;
+
+        }else{
+          alert(xhr.responseText)
+        }
+      };
+
+      xhr.open('GET', 'Logout?');
+      xhr.setRequestHeader('Content-type','application/json;charset=UTF-8');
+
+      xhr.send();
+
+    }</script>
+    <script>
+        var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          
+          alert("welcome back " + xhr.responseText)
+          document.getElementById("user_firstname").innerHTML="Welcome " + xhr.responseText
+
+        }else{
+            
+          window.location.href = xhr.responseText;
+          alert("you have to login to access that page")
+        }
+      };
+
+      xhr.open('POST', 'Logout?');
+      xhr.setRequestHeader('Content-type','application/json;charset=UTF-8');
+
+      xhr.send();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Form" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A useless one</title>
+  </head>
+
+  <body>
+    <div class="flexboxrow">
+      <div class="flexboxcolumn">
+        <header>
+          <h1 id="user_firstname">This is an error</h1>
+        </header>
+        <div id="sub-header">your panel</div>
+      </div>
+    </div>
+
+    <div class="flexboxrow">
+      <div id="undertitle"></div>
+    </div>
+
+    <div class="flexboxrow">
+      <div class="flexboxcolumn">
+        <div class="flex-item">
+          <div class="flex-item-inside">
+            <table id="first_table">
+              <tr>
+                <th>
+                  <!--empty on purpose-->
+                </th>
+                <th>
+                  <div class="flex-item-title">Basic Information</div>
+                </th>
+                <th>
+                  <!--empty on purpose-->
+                </th>
+              </tr>
+
+              <tr>
+                <th style="text-align: right">
+                  <label for="change_info"><b>Change your info:</b></label>
+                </th>
+                <th>
+                  <button id="change_info" onclick="change_info2()">Change info</button>
+                </th>
+                <td></td>
+              </tr>
+
+              <tr>
+                <th style="text-align: right">
+                  <label for="get_bmi"><b>Check your health:</b></label>
+                </th>
+                <th>
+                  <button id="get_bmi" onclick="get_bmi()">BMI calculator</button>
+                </th>
+                <td></td>
+              </tr>
+
+              <tr>
+                <th style="text-align: right">
+                  <label for="get_doctors"><b>Check local doctors:</b></label>
+                </th>
+                <th>
+                  <button id="get_doctors" onclick="get_doctors()">Get Doctors</button>
+                </th>
+                <td></td>
+              </tr>
+
+              <tr>
+                <th style="text-align: right">
+                  <label for="logout"><b>logout:</b></label>
+                </th>
+                <th>
+                  <button id="logout" onclick="logout()">logout</button>
+                </th>
+                <td></td>
+              </tr>
+              <tr id="for_errors">
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="for_printing"></div>
+      </div>
+      
+      <footer>The next facebook is coming</footer>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+  <servlet>
+    <servlet-name>GetUser</servlet-name>
+    <servlet-class>GetUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Username_check</servlet-name>
+    <servlet-class>Username_check</servlet-class>
+  </servlet>
+
+  <servlet>
+      <servlet-name>Get_Doctors</servlet-name>
+    <servlet-class>Get_Doctors</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Email_check</servlet-name>
+    <servlet-class>Email_check</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Amka_check</servlet-name>
+    <servlet-class>Amka_check</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>Login</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Update_User</servlet-name>
+    <servlet-class>Update_User</servlet-class>
+  </servlet>
+
+
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>Logout</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Change_info</servlet-name>
+    <servlet-class>Change_info</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GetUser</servlet-name>
+    <url-pattern>/GetUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Update_User</servlet-name>
+    <url-pattern>/Update_User</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Username_check</servlet-name>
+    <url-pattern>/Username_check</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Email_check</servlet-name>
+    <url-pattern>/Email_check</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Amka_check</servlet-name>
+    <url-pattern>/Amka_check</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Change_info</servlet-name>
+    <url-pattern>/Change_info</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Get_Doctors</servlet-name>
+    <url-pattern>/Get_Doctors</url-pattern>
+  </servlet-mapping>
+
+
+
+
+
+  <session-config>
+    <session-timeout>
+      30
+    </session-timeout>
+  </session-config>
+</web-app>
