@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="description" content="Form" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A useless one</title>
+</head>
+
+<body>
+
+  <!--The header of the site -->
+  <div class="flexboxrow">
+    <div class="flexboxcolumn">
+      <header>
+        <h1>Form</h1>
+      </header>
+      <div id="sub-header">a formless one</div>
+    </div>
+  </div>
+
+  <!--the under title grey line-->
+  <div class="flexboxrow">
+    <div id="undertitle">
+    </div>
+  </div>
+
+  <!--the main body-->
+  <!--everything goes into a row-->
+  <form method="post" id="whole_form">
+    <div class="flexboxrow">
+
+      <!--the we have a column to enter each type of form-->
+      <!-- Basic Login information-->
+      <div class="flexboxcolumn">
+
+        <!--inside the column we have a flex-item to store the things-->
+        <div class="flex-item">
+          <div class="flex-item-inside">
+
+            <!--and because we need left the title and right the input we need again a row-->
+
+
+
+            <table id="first_table">
+              <tr>
+                <th>
+                  <!--empty on purpose-->
+                </th>
+                <th>
+                  <div class="flex-item-title">Basic Login Information</div>
+                </th>
+                <th>
+                  <!--empty on purpose-->
+                </th>
+              </tr>
+              <!--For the username-->
+              <tr>
+                <th style="text-align: right;"><label for="username"><b>Username:</b></label></th>
+                <th>
+
+                  <input type="text" minlength="8" id="username" name="username">
+
+                </th>
+                <td>
+                  (must be 8 characters long)
+                </td>
+              </tr>
+              <!--For the email-->
+              <tr>
+                <th style="text-align: right;"><label for="email"><b>Email:</b></label></th>
+                <th>
+
+                  <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+                </th>
+                <td>
+                  (must be a valid email address)
+                </td>
+              </tr>
+              <!--For the password-->
+              <tr>
+                <th style="text-align: right;"><label for="pwd"><b>Password:</b></label></th>
+                <th>
+
+                  <input type="password" id="pwd" name="pwd" pattern="^(?=.*[0-9])(?=.*[A-z])(?=.*\W).*" minlength="8"
+                    maxlength="15">
+                  <button id="password_visibility">o</button>
+                </th>
+                <td>
+                  (8-15 characters containing character, symbol and number)
+                </td>
+              </tr>
+
+              <!--For the re enter of password-->
+              <tr>
+                <th style="text-align: right;"><label for="rpwd"><b>Re-enter password:</b></label></th>
+                <th>
+
+                  <input type="password" id="rpwd" name="rpwd" pattern="^(?=.*[0-9])(?=.*[A-z])(?=.*\W).*" minlength="8"
+                    maxlength="15">
+
+                </th>
+                <td>
+                  (must be the same as the password)
+                </td>
+              </tr>
+              <tr id="str_pwd"></tr>
+              <tr id="for_printing"></tr>
+            </table>
+
+
+
+
+
+          </div>
+        </div>
+
+        <!-- Basic User information-->
+        <div class="flex-item">
+          <div class="flex-item-inside">
+            <!--and because we need left the title and right the input we need again a row-->
+
+
+
+            <table>
+              <tr>
+                <th>
+                  <!--empty on purpose-->
+                </th>
+                <th>
+                  <div class="flex-item-title">Basic User Information</div>
+                </th>
+                <th>
+                  <!--empty on purpose-->
+                </th>
+              </tr>
+              <!--For the type of user-->
+              <tr>
+                <th style="text-align: right;"><label><b>Type of user:</b></label></th>
+                <th>
+
+                  <input type="radio" name="type_user" id="default_selected" value="Default" checked>Default
+                  <input type="radio" name="type_user" id="doctor_checked" value="Doctor">Doctor
+
+                </th>
+                <th>
+                  <!--empty on purpose-->
+                </th>
+              </tr>
+              <tr id="doctor_type"></tr>
+              <tr id="input_for_doctor"></tr>
+              <!--For the first name-->
+              <tr>
+                <th style="text-align: right;"><label for="name"><b>First Name:</b></label></th>
+                <th>
+
+                  <input type="text" id="name" name="name" minlength="3" maxlength="30">
+
+                </th>
+                <td>
+                  (3 to 30 characters )
+                </td>
+              </tr>
+
+              <!--For the last name-->
+              <tr>
+                <th style="text-align: right;"><label for="surname"><b>Last Name:</b></label></th>
+                <th>
+
+                  <input type="text" id="surname" name="surname" minlength="3" maxlength="30">
+
+                </th>
+                <td>
+                  (3 to 30 characters )
+                </td>
+              </tr>
+              <!--For the last name-->
+              <tr>
+                <th style="text-align: right;"><label for="date_birth"><b>Date of birth:</b></label></th>
+                <th>
+                  <input type="date" id="date_birth" name="date_birth" value="1980-01-01" min="1920-01-01"
+                    max="2005-12-31">
+
+                </th>
+                <td>
+                  (01/01/1920 - 31/12/2005 accepted)
+                </td>
+              </tr>
+              <!--For the gender of user-->
+              <tr>
+                <th style="text-align: right;"><label><b>Gender of user:</b></label></th>
+                <th>
+
+                  <input type="radio" name="gender" value="Other" checked>Other
+                  <input type="radio" name="gender" value="Male">Male
+                  <input type="radio" name="gender" value="Female">Female
+
+                </th>
+                <th>
+                  <!--empty on purpose-->
+                </th>
+              </tr>
+              <!--For the social security number-->
+              <tr>
+                <th style="text-align: right;"><label for="ssn"><b>Social Security Number:</b></label></th>
+                <th>
+
+                  <input type="text" id="ssn" name="ssn" pattern="^[0-9]{11}$">
+
+                </th>
+                <td id="ssn_alert_td">
+                  (11 digits )
+                </td>
+              </tr>
+              <!--For the country of origin-->
+              <tr>
+                <th style="text-align: right;"><label for="country"><b>Country of origin:</b></label></th>
+                <th>
+                  <select id="country" name="country">
+                    <option value="Afganistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="American Samoa">American Samoa</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Anguilla">Anguilla</option>
+                    <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Aruba">Aruba</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bermuda">Bermuda</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Bonaire">Bonaire</option>
+                    <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                    <option value="Brunei">Brunei</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Canary Islands">Canary Islands</option>
+                    <option value="Cape Verde">Cape Verde</option>
+                    <option value="Cayman Islands">Cayman Islands</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Channel Islands">Channel Islands</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Christmas Island">Christmas Island</option>
+                    <option value="Cocos Island">Cocos Island</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo">Congo</option>
+                    <option value="Cook Islands">Cook Islands</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cote DIvoire">Cote DIvoire</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Curaco">Curacao</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="East Timor">East Timor</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Falkland Islands">Falkland Islands</option>
+                    <option value="Faroe Islands">Faroe Islands</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="French Guiana">French Guiana</option>
+                    <option value="French Polynesia">French Polynesia</option>
+                    <option value="French Southern Ter">French Southern Ter</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Gibraltar">Gibraltar</option>
+                    <option value="Great Britain">Great Britain</option>
+                    <option value="Greece" selected="selected">Greece</option>
+                    <option value="Greenland">Greenland</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guadeloupe">Guadeloupe</option>
+                    <option value="Guam">Guam</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="India">India</option>
+                    <option value="Iran">Iran</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Isle of Man">Isle of Man</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kiribati">Kiribati</option>
+                    <option value="Korea North">Korea North</option>
+                    <option value="Korea Sout">Korea South</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Libya">Libya</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Macau">Macau</option>
+                    <option value="Macedonia">Macedonia</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Marshall Islands">Marshall Islands</option>
+                    <option value="Martinique">Martinique</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mayotte">Mayotte</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Midway Islands">Midway Islands</option>
+                    <option value="Moldova">Moldova</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Nambia">Nambia</option>
+                    <option value="Nauru">Nauru</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Netherland Antilles">Netherland Antilles</option>
+                    <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                    <option value="Nevis">Nevis</option>
+                    <option value="New Caledonia">New Caledonia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Niue">Niue</option>
+                    <option value="Norfolk Island">Norfolk Island</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Palau Island">Palau Island</option>
+                    <option value="Palestine">Palestine</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Phillipines">Philippines</option>
+                    <option value="Pitcairn Island">Pitcairn Island</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Puerto Rico">Puerto Rico</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Republic of Montenegro">Republic of Montenegro</option>
+                    <option value="Republic of Serbia">Republic of Serbia</option>
+                    <option value="Reunion">Reunion</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="St Barthelemy">St Barthelemy</option>
+                    <option value="St Eustatius">St Eustatius</option>
+                    <option value="St Helena">St Helena</option>
+                    <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                    <option value="St Lucia">St Lucia</option>
+                    <option value="St Maarten">St Maarten</option>
+                    <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                    <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                    <option value="Saipan">Saipan</option>
+                    <option value="Samoa">Samoa</option>
+                    <option value="Samoa American">Samoa American</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Swaziland">Swaziland</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syria">Syria</option>
+                    <option value="Tahiti">Tahiti</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tokelau">Tokelau</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Erimates">United Arab Emirates</option>
+                    <option value="United States of America">United States of America</option>
+                    <option value="Uraguay">Uruguay</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Vatican City State">Vatican City State</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                    <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                    <option value="Wake Island">Wake Island</option>
+                    <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zaire">Zaire</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                  </select>
+                </th>
+                <td id="auto_complete">
+                  <!-- left empty on purpose -->
+                </td>
+              </tr>
+
+              <!--For the city-->
+              <tr>
+                <th style="text-align: right;"><label for="city"><b>City:</b></label></th>
+                <th>
+
+                  <input type="text" id="city" name="city" minlength="3" maxlength="50">
+
+                </th>
+                <td>
+                  (3 to 50 characters )
+                </td>
+              </tr>
+
+              <!--For the adress-->
+              <tr>
+                <th style="text-align: right;"><label for="adress"><b id="Address_change">Address:</b></label></th>
+                <th>
+
+                  <input type="text" id="adress" name="adress" minlength="5" maxlength="50">
+
+                </th>
+                <td id="address_error">
+                  (5 to 50 characters format: address number)
+                </td>
+              </tr>
+              <tr>
+                <th></th>
+                <th>
+                  <div id="Map" style="height:300px; width:300px; display:none "></div>
+                </th>
+                <th></th>
+              </tr>
+              <!--For the telephone number-->
+              <tr>
+                <th style="text-align: right;"><label for="telephone"><b>Telephone Number:</b></label></th>
+                <th>
+
+                  <input type="text" id="telephone" name="telephone" pattern="^[0-9]{14}$">
+
+                </th>
+                <td>
+                  (14 numbers, not )
+                </td>
+              </tr>
+              <!--For the height number-->
+              <tr>
+                <th style="text-align: right;"><label for="height"><b>Height:</b></label></th>
+                <th>
+
+                  <input type="number" id="height" name="height" min="100" max="250" value="100">
+
+                </th>
+                <td>
+                  (in cm , not )
+                </td>
+              </tr>
+              <!--For the weight number-->
+              <tr>
+                <th style="text-align: right;"><label for="weight"><b>Weight:</b></label></th>
+                <th>
+
+                  <input type="number" id="weight" name="weight" step="0.01" min="20" max="300" value="20">
+
+                </th>
+                <td>
+                  (kilos , not )
+                </td>
+              </tr>
+              <!--If user blood donor-->
+              <tr>
+                <th style="text-align: right;"><label><b>Blood donor:</b></label></th>
+                <th>
+
+                  <input type="radio" name="blood" value="Yes" checked>Yes
+                  <input type="radio" name="blood" value="No">No
+
+                </th>
+                <th>
+                  <!--empty on purpose-->
+                </th>
+              </tr>
+
+              <!--For the type of blood-->
+              <tr>
+                <th style="text-align: right;"><label for="type-of-blood"><b>Type of blood:</b></label></th>
+                <th>
+                  <select id="type-of-blood" name="type-of-blood">
+                    <option value="Unknown" selected="selected">Unknown</option>
+                    <option value="A-">A-</option>
+                    <option value="A+">A+</option>
+                    <option value="B-">B-</option>
+                    <option value="B+">B+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="0-">0-</option>
+                    <option value="0+">0+</option>
+                  </select>
+                </th>
+                <td>
+                  <!-- left empty on purpose -->
+                </td>
+
+              </tr>
+
+              <!--Accept terms-->
+              <tr>
+                <th style="text-align: right;"><label for="terms"><b>I understand and accept the terms:</b></label></th>
+                <th>
+                  <input type="checkbox" id="terms" name="terms">
+
+                </th>
+                <td id="terms_td">
+                  (thanks for selling your soul)
+                </td>
+              </tr>
+
+              <tr>
+                <th>
+                  <!--left blank on purpose to maintain the button in the middle-->
+                </th>
+                <th>
+                  <button type="submit" class="fill">Register</button>
+                </th>
+                <th>
+                  <!--empty on purpose-->
+                </th>
+              </tr>
+
+            </table>
+
+            <div id="divID"></div>
+  </form>
+
+
+
+
+  </div>
+  </div>
+
+
+  </div>
+  <footer>The next facebook is coming</footer>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+  <script src="js.js"></script>
+  <script src="geocode_api.js"></script>
+  <script src="on_start.js"></script>
+</body>
+
+</html>

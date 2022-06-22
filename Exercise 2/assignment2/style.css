@@ -1,0 +1,117 @@
+header {
+  font-family: "Times New Roman", serif;
+  text-align: center;
+  color: #171717;
+  background-color: white;
+}
+#sub-header {
+  margin-top: -20px;
+  margin-bottom: 10px;
+  opacity: 65%;
+  text-align: center;
+  color: #787878;
+}
+#undertitle {
+  border-top: 2px solid #787878;
+  height: 20px;
+  width: 80%;
+  opacity: 65%;
+  text-align: center;
+}
+footer {
+  border-top: 2px solid #787878;
+  height: 20px;
+  width: 80%;
+  opacity: 65%;
+  text-align: center;
+}
+
+/*FLEX BOX*/
+.flexboxrow {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.flexboxcolumn {
+  display: inherit;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 70%;
+}
+.flex-item {
+  display: flex;
+  border: 2px solid #787878;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  font-size: 1em;
+  margin-bottom: 2%;
+}
+
+/*puts a small margin around items inside flex item*/
+.flex-item-inside {
+  margin: 1% 2% 2% 2%;
+  
+}
+
+.flex-item-title {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 3%;
+}
+
+.flex-item td {
+  text-align: left;
+  padding-bottom: 2%;
+}
+.flex-item th {
+  padding-bottom: 2%;
+  text-align:  center;
+}
+
+.flex-item th,
+.flex-item td{
+  width: 33%;
+}
+
+/*found this code and changed a bit 
+to fit with my awesome website*/
+.fill {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.fill::after {
+  content: "";
+  background-color: #787878;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.fill:hover::after {
+  top: 0px;
+  left: 0px;
+}
+
+
+#pwd {
+  margin-right: -11%;
+}
+
+#extra_info{
+  height: 100px;
+}

@@ -1,0 +1,362 @@
+<!-- Instead of <aside> <nav> etc i use divs with classes such us <navigation> <flexboxcolumn> etc
+      Used bootstrap at the image display , progress bar , social media icons
+      music as a glyphicon , at hobbies as a badge and at the youtube videos as collapse-->
+
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Metadata -->
+  <meta charset="UTF-8" />
+  <meta name="description" content="A personal page" />
+  <meta name="keywords" content="Student, CSD UOC" />
+  <meta name="author" content="Theodoros Chalkidis" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- End of Metadata -->
+  <title>Theodoros Chalkidis</title>
+</head>
+
+<body>
+  <!-- Here is our main header that is used across all the pages of our website -->
+  <div class="flexboxrow">
+    <div class="spacer"></div>
+    <div class="flexboxcolumn">
+      <header>
+        <h1>Theodoros Chalkidis</h1>
+        <h3 id="sub-header">A personal blog</h3>
+      </header>
+    </div>
+    <div class="spacer"></div>
+    <div class="flexboxcolumn">
+      <ul class="navigation">
+        <li><a href="#about">Biography</a></li>
+        <li><a href="#university">University</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#stuff">Stuff</a></li>
+        <li><a href="#music">Music</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="flexboxrow">
+    <div id="undertitle"></div>
+  </div>
+
+  <ul class="flexboxrow">
+    <ul class="flexboxcolumn">
+      <!-- Start of about me section -->
+      <li class="flex-itemleft">
+        <div class="flex-itemtitle">
+          <a id="about">About me</a>
+        </div>
+        <div class="flex-itemleft-section">
+          <h2>
+            <b>Theodoros is a creative part time kitchen assistant who is
+              obsessed with tank tops</b>
+          </h2>
+          <h3 id="title_biography">~ A biography ~</h3>
+          <div id="text_biography">
+            Theodoros Ortiz chalkidis is a 21-year-old part time kitchen
+            assistant who enjoys glamping, meditation and blogging. He is
+            creative and energetic, but can also be very greedy and a bit
+            evil.
+            <u><i><b><mark>He is greek.</mark></b></i></u>
+            He started studying food science at college but never finished the
+            course. He is allergic to peanuts.
+            <mark> He is obsessed with tank tops.</mark>
+            Physically, theodoros is in pretty good shape. He is tall with
+            light skin, mouse hair and brown eyes. He grew up in a middle
+            class neighbourhood. After his mother died when he was young, he
+            was raised by his father He is currently in a relationship with
+            <mark>Eva Green</mark>. Eva is 20 years older than him and works
+            as a sous chef. theodoros's best friend is a part time kitchen
+            assistant called<b> Michael "Hayate" Zanis </b>. They get on well
+            most of the time. He also hangs around with
+            <u>Jeff Bezos and Snoop Dog.</u> They enjoy cycling together.
+            <br />
+            <h6>
+              This was an auto generated
+              <a href="https://www.character-generator.org.uk/bio/" target="blank">biography</a>
+            </h6>
+          </div>
+        </div>
+      </li>
+      <!-- Ends of about me section -->
+
+      <!-- Starting the university block -->
+      <li class="flex-itemleft">
+        <div class="flex-itemtitle"><a id="university">University</a></div>
+        <div class="flex-itemleft-section">
+          <h2>Some marks i am proud of:</h2>
+          <table>
+            <tr>
+              <th>Lesson</th>
+              <th>Code</th>
+              <th>Mark</th>
+            </tr>
+            <tr>
+              <td>diadiktiokentrikos programmatismos</td>
+              <td>HY-359</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>leitourgika sistimata</td>
+              <td>HY-345</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>agglika 3is dimotikou</td>
+              <td>none</td>
+              <td>10</td>
+            </tr>
+          </table>
+          <h2>And some marks i am not proud of :</h2>
+          <table>
+            <tr>
+              <th>Lesson</th>
+              <th>Code</th>
+              <th>Mark</th>
+            </tr>
+            <tr>
+              <td>Ekthesi paneliniwn</td>
+              <td>none</td>
+              <td>9.5</td>
+            </tr>
+            <tr>
+              <td>gimnastiki gimnasiou</td>
+              <td>3 xronies</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td>ximeia</td>
+              <td>a likeioy</td>
+              <td>11</td>
+            </tr>
+          </table>
+          <br />
+
+          University progress till now:
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="4"
+              style="width: 50%">
+              2 out of 4 years completed
+            </div>
+          </div>
+
+          <br />
+        </div>
+      </li>
+      <!-- ending the university block -->
+
+      <!-- Starting the hobbies block -->
+      <li class="flex-itemleft">
+        <div class="flex-itemtitle">
+          <a id="hobbies">Hobbies </a><span class="badge">4</span>
+        </div>
+        <div class="flex-itemleft-section">
+          <h2>Some of my hobbies include:</h2>
+          <ul class="list_main">
+            <li>
+              Magic the gathering
+              <br />
+              <div class="list_sub">
+                A card game like yu-gi-oh and hearthstone , pay a lot to win
+                and still loose.
+              </div>
+            </li>
+            <li>
+              Dungeons and dragons
+              <br />
+              <div class="list_sub">
+                You roleplay what you would never be , in an attempt to hide
+                away the pain.
+              </div>
+            </li>
+            <li>
+              Crippling depression
+              <br />
+              <div class="list_sub">
+                Csd gives me the will to hang in there. *Points noose*
+              </div>
+            </li>
+            <li>
+              Skate
+              <br />
+              <div class="list_sub">
+                Or otherwise how to have bad knees at your twenties.
+              </div>
+            </li>
+          </ul>
+          <img id="images_leftbox" src="./img/nerd.jpg" alt="a selfie" />
+        </div>
+      </li>
+      <!-- Ending the hobbies block -->
+
+      <!-- Starting stuff block -->
+      <li class="flex-itemleft">
+        <div class="flex-itemtitle"><a id="stuff">Stuff</a></div>
+        <div class="flex-itemleft-section">
+          <h2>Websites that i find interisting:</h2>
+          <ul class="list_main">
+            <div id="list_links">
+              <li>
+                <a href="https://www.music-map.com/" target="_blank">Music map</a>
+                <br />
+                <div class="list_sub">
+                  Find artists similar to your favorites.
+                </div>
+              </li>
+
+              <li>
+                <a href="https://en.metal-tracker.com/" target="_blank">Download Metal</a>
+                <br />
+                <div class="list_sub">
+                  Find pretty much every metal album free for download, kinda
+                  legal.
+                </div>
+              </li>
+              <li>
+                <a href="https://readcomiconline.li/" target="_blank">Read comics online</a>
+                <br />
+                <div class="list_sub">
+                  Find pretty much every comic free online, kinda legal.
+                </div>
+              </li>
+              <li>
+                <a href="http://users.sch.gr/vasanagno/comics.html?fbclid=IwAR3PD07U7D2f2UhPULQyu2NUelUkXKnsh2u2FKZfDd82j-0EUpB20Xj9B6o"
+                  target="_blank">Greek comics online</a>
+                <br />
+                <div class="list_sub">
+                  Find a lot of free greek translated comics. Hosted with sch
+                  domain , which makes it funny.
+                </div>
+              </li>
+              <li>
+                <a href="https://www.csd.uoc.gr/" target="_blank">Find what made you have suicidal thoughts</a>
+                <br />
+                <div class="list_sub">Link to where everything started.</div>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </li>
+      <!-- ending stuff block -->
+    </ul>
+    <ul class="flexboxcolumn">
+      <!-- Starting music block -->
+      <li class="flex-itemright">
+        <h2>A music clip</h2>
+        <div class="flex-itemright-sub">
+          <span class="glyphicon glyphicon-music"></span>
+          It's from one of my favorite songs and<br />
+          it's called Viande from the band Igorrr<span class="glyphicon glyphicon-music"></span><br /><br />
+        </div>
+        <audio controls>
+          <source src="./media/igorrr.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </li>
+      <!-- ending music block -->
+
+      <!-- Starting video block -->
+      <li class="flex-itemright">
+        <h2>A video clip</h2>
+        <div class="flex-itemright-sub">
+          A little funny video because i couldnt<br />
+          find anything else less than 1 mb<br /><br />
+        </div>
+
+        <video width="340" controls>
+          <source src="./media/video.mp4" type="video/mp4" />
+
+          Your browser does not support HTML video.
+        </video>
+      </li>
+      <!-- ending video block -->
+
+      <!-- start social media block -->
+      <li class="flex-itemright">
+        <div id="social_media_box">
+          <h2>Find me on social media here :</h2>
+          <a data-toggle="tooltip" title="Facebook" href="https://el-gr.facebook.com/kyriakosmitsotakis"
+            target="blank"><img class="social_media_icons" src="./img/facebook.png" alt="facebook logo" /></a>
+          <a data-toggle="tooltip" title="Twitter" href="https://twitter.com/atsipras" target="blank"><img
+              class="social_media_icons" src="./img/twitter.png" alt="twitter logo" /></a>
+          <a data-toggle="tooltip" title="Instagram" href="https://www.instagram.com/raelilred/" target="blank"><img
+              class="social_media_icons" src="./img/instagram.png" alt="instagram logo" /></a>
+          <a data-toggle="tooltip" title="Youtube" href="https://www.youtube.com/c/frutotrelampampinos"
+            target="blank"><img class="social_media_icons" src="./img/youtube.png" alt="youtube logo" /></a>
+        </div>
+      </li>
+      <!-- end social media block -->
+
+      <!-- start share social media block -->
+      <li class="flex-itemright">
+        <h2>Share this website on social media</h2>
+        <iframe
+          src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=large&width=77&height=28&appId"
+          height="28" width="150" style="border: none; overflow: hidden" scrolling="no" frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+          data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </li>
+      <!-- end share social media block -->
+
+      <!-- start picture block -->
+      <li class="flex-itemright">
+        <h2>An image i really like:</h2>
+        <img class="img-thumbnail" src="./img/moon.jpg" alt="a picture of the moon" width="350" />
+      </li>
+      <!-- start picture block -->
+
+      <!-- start spotify block -->
+      <li class="flex-itemright">
+        <h2>Another song, from spotify</h2>
+        <iframe src="https://open.spotify.com/embed/track/4fwLPOCa4N9V6RkWDoUShv" width="340" height="340"
+          frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </li>
+      <!-- start spotify block -->
+    </ul>
+  </ul>
+  <ul class="flexboxrow">
+    <!-- start youtube video block -->
+
+    <li id="flex-youtube">
+      <div id="flex-youtube-itemtitle">
+        <a id="music"> </a>
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
+          Youtube videos
+        </button>
+      </div>
+
+      <div id="demo" class="collapse">
+        2 albums everyone should at least listen to once.
+        <div id="flex-youtube-section">
+          <iframe src="https://www.youtube.com/embed/TvGPAVTYfXI" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+          <iframe src="https://www.youtube.com/embed/ZKduOZk_qwY" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </li>
+
+    <!-- end youtube video block -->
+  </ul>
+  <div class="flexboxrow">
+    <div id="footer">
+      <p>Please press <kbd>Alt</kbd> + <kbd>F4</kbd> to see a magic trick.</p>
+      Sponsored by <mark>every</mark> coffee company out there (╯°□°)╯︵ ┻━┻
+    </div>
+  </div>
+</body>
+
+</html>
